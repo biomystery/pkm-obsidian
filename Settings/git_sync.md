@@ -1,4 +1,4 @@
-# Icloud sync and git version control
+# icloud sync and git version control
 
 Below is one common method to “lift” your Git repository out of your iCloud‐synced vault so that only a tiny pointer file remains inside your vault. This keeps the bulky Git metadata out of your mobile device’s sync, improving Obsidian’s startup time.
 
