@@ -4,3 +4,4 @@
 
 - `Journals`
 - `Templater`
+- `Git`
