@@ -49,7 +49,7 @@ Instead of having the full `.git` folder inside your vault (which iCloud syncs),
 
    Ensure that any device on which you run Git commands for this vault uses the same setup (i.e. the same external Git directory and pointer file).
 
-7. **Resolve the git mv issue**
+7. **Resolve the git mv/log issue**
 
    When you move the .git directory and create a .git file with a gitdir reference, you're essentially creating a Git worktree. In this configuration, Git commands like git mv won't work directly in the /path/to/your/ObsidianVault directory. Here's how you can resolve this:
 
@@ -59,7 +59,9 @@ Instead of having the full `.git` folder inside your vault (which iCloud syncs),
    # optiona 2
    # add to .bashrc or .zshrc
    alias obsgit='git --git-dir=/Users/yourusername/.obsidian-git --work-tree=/path/to/your/ObsidianVault'
-
+   # then run
+   obsgit mv <source> <destination>
+   obsgit log
    ```
 
 ---
