@@ -49,6 +49,19 @@ Instead of having the full `.git` folder inside your vault (which iCloud syncs),
 
    Ensure that any device on which you run Git commands for this vault uses the same setup (i.e. the same external Git directory and pointer file).
 
+7. **Resolve the git mv issue**
+
+   When you move the .git directory and create a .git file with a gitdir reference, you're essentially creating a Git worktree. In this configuration, Git commands like git mv won't work directly in the /path/to/your/ObsidianVault directory. Here's how you can resolve this:
+
+   ```sh
+   # optiona 1
+   git --git-dir=/Users/yourusername/.obsidian-git --work-tree=/path/to/your/ObsidianVault mv <source> <destination>
+   # optiona 2
+   # add to .bashrc or .zshrc
+   alias obsgit='git --git-dir=/Users/yourusername/.obsidian-git --work-tree=/path/to/your/ObsidianVault'
+
+   ```
+
 ---
 
 By setting up your repository in this way, you keep the heavy Git data out of the iCloud-synced folder while still allowing you to version-control your notes. This approach is recommended by several Obsidian users who use cloud storage alongside Git.
