@@ -1,8 +1,7 @@
 [wrap-times.sh](./wrap-times.sh) is a macOS shell script to find all `HH:mm` time instances in `.md` files and wrap them with `<span class="custom-time"></span>` spans so that the times are colored.
 
-<div class="warning">
-!!! Warning: The time span in Timeline won't work after this changes.
-</div>
+> [!WARNING]
+> !!! Warning: The time span in Timeline won't work after this changes.
 
 ---
 
